@@ -29,9 +29,10 @@ module.exports = function (gruntOrShipit) {
       var args = Array.isArray(shipit.config.npm.installArgs) ? shipit.config.npm.installArgs.join(' ') : shipit.config.npm.installArgs;
       var flags = Array.isArray(shipit.config.npm.installFlags) ? shipit.config.npm.installFlags.join(' ') : shipit.config.npm.installFlags;
       var AF = args ? flags ? args.concat(' ',flags) : args : flags ? flags : '';
+      var token = shipit.config.npm.npm_token;
 
       return shipit[method](
-        sprintf('node -v && cd %s && npm i %s', cdPath, AF)
+        sprintf('node -v && cd %s && NPM_TOKEN=%s npm i %s', cdPath, token, AF)
       );
 
     }
