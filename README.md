@@ -10,6 +10,7 @@ Inspired by the [capistrano/composer](https://github.com/capistrano/composer/) e
 - Triggered on the `updated` or `fetched` event from [shipit-deploy](https://github.com/shipitjs/shipit-deploy)
 - Has a direct pass though task to [npm cli](https://docs.npmjs.com/cli)
 - Works via [shipit-cli](https://github.com/shipitjs/shipit) and [grunt-shipit](https://github.com/shipitjs/grunt-shipit)
+- Supports [NPM private modules](https://docs.npmjs.com/private-modules/ci-server-config). 
 
 ## Install
 
@@ -65,6 +66,13 @@ Default: `updated` or `fetched` (depending on `npm.remote` value)
 
 An event name that triggers `npm:install`. Can be set to false to prevent the `npm:install` task from listening to any events.
 
+### `npm.npm_token`
+
+Type: `String`
+Default: ""
+
+The value of npm_token will be set as the NPM_TOKEN environment variable for the npm command. For more details on using 
+npm private modules, refer to the [npm private module documentation](https://docs.npmjs.com/private-modules/ci-server-config)
 
 ### Example `shipitfile.js` options usage
 
