@@ -10,7 +10,7 @@ Inspired by the [capistrano/composer](https://github.com/capistrano/composer/) e
 - Triggered on the `updated` or `fetched` event from [shipit-deploy](https://github.com/shipitjs/shipit-deploy)
 - Has a direct pass though task to [npm cli](https://docs.npmjs.com/cli)
 - Works via [shipit-cli](https://github.com/shipitjs/shipit) and [grunt-shipit](https://github.com/shipitjs/grunt-shipit)
-- Supports [NPM private modules](https://docs.npmjs.com/private-modules/ci-server-config). 
+- Supports [NPM private modules](https://docs.npmjs.com/private-modules/intro). 
 
 ## Install
 
